@@ -8,10 +8,13 @@
         Title="WPFLayoutKombi" Height="200" Width="300">
     <StackPanel Orientation="Horizontal" Background="Black">
     <Canvas Width="100" Height="130" Margin="5" Background="LightGray">
+        <!--Every button gets own click event-->
         <Button x:Name="B1" Canvas.Top="50" Canvas.Left="25" Click="B1_Click">Button 1</Button>
         <Button x:Name="B2" Canvas.Bottom="5" Canvas.Right="5" Click="B2_Click">Button 2</Button>
     </Canvas>
+        <!--Sp_Click Event for all buttons in Stackpanel. To see, which button is pressed, create new button b with an event e and from there the source, which is a button. -->
         <StackPanel Width="100" Margin="5" Background="LightBlue" Button.Click="Sp_Click">
+            <!--x:Name is to declare the name of the button. "Button x" is the text on the button which is shown in the gui-->
             <Button x:Name="B3" Margin="5"> Button 3</Button>
             <Button x:Name="B4" Margin="5"> Button 4</Button>
             <Button x:Name="B5" Margin="5"> Button 5</Button>

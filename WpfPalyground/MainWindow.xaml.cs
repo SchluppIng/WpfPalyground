@@ -25,6 +25,7 @@ namespace WpfPalyground
             InitializeComponent();
         }
 
+        //Buttons in canvas gets own click event
         private void B1_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Button 1 pressed");
@@ -35,6 +36,7 @@ namespace WpfPalyground
             MessageBox.Show("Button 2 pressed");
         }
 
+        //Each button has the same event, but the source is determined by e.Source 
         private void Sp_Click(object sender, RoutedEventArgs e)
         {
             Button b = e.Source as Button;
