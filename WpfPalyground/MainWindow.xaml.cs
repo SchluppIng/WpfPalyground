@@ -24,5 +24,21 @@ namespace WpfPalyground
         {
             InitializeComponent();
         }
+
+        private void B1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button 1 pressed");
+        }
+
+        private void B2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button 2 pressed");
+        }
+
+        private void Sp_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = e.Source as Button;
+            MessageBox.Show(b.Name + " clicked");
+        }
     }
 }

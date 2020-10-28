@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPalyground"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="114,346,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="95,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369"/>
-
-    </Grid>
+        Title="WPFLayoutKombi" Height="200" Width="300">
+    <StackPanel Orientation="Horizontal" Background="Black">
+    <Canvas Width="100" Height="130" Margin="5" Background="LightGray">
+        <Button x:Name="B1" Canvas.Top="50" Canvas.Left="25" Click="B1_Click">Button 1</Button>
+        <Button x:Name="B2" Canvas.Bottom="5" Canvas.Right="5" Click="B2_Click">Button 2</Button>
+    </Canvas>
+        <StackPanel Width="100" Margin="5" Background="LightBlue" Button.Click="Sp_Click">
+            <Button x:Name="B3" Margin="5"> Button 3</Button>
+            <Button x:Name="B4" Margin="5"> Button 4</Button>
+            <Button x:Name="B5" Margin="5"> Button 5</Button>
+        </StackPanel>
+    </StackPanel>
 </Window>
